@@ -1,0 +1,30 @@
+ 2019-04-22 16:22:35 exception.py[line:135] ERROR Internal Server Error: /state_list/
+Traceback (most recent call last):
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\BrandMax\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\BrandMax\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\BrandMax\TalkTrack_api\api\views.py", line 87, in get
+    query_dict = models.DeviceStatus.objects.filter(device_id=device_id).valuest()
+AttributeError: 'QuerySet' object has no attribute 'valuest'
+ 2019-04-22 17:10:58 exception.py[line:135] ERROR Internal Server Error: /delete_config
+Traceback (most recent call last):
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "E:\BrandMax\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\BrandMax\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\BrandMax\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\BrandMax\TalkTrack_api\api\views.py", line 131, in get
+    return request('/')
+TypeError: 'WSGIRequest' object is not callable
